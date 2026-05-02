@@ -207,7 +207,6 @@ public class HandheldDrillItem extends DiggerItem implements CustomArmPoseItem, 
             public void destroyBlocks(Level world, ItemStack tool, @Nullable Player player, BiConsumer<BlockPos, ItemStack> dropConsumer) {
                 if (player == null) return;
                 ores.forEach(makeCallbackFor(world, 0.5f, tool, player, dropConsumer));
-                player.causeFoodExhaustion(ores.size() * 0.5f);
             }
 
             @Override
